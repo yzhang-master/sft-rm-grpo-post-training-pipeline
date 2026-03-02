@@ -1,0 +1,34 @@
+{
+  "data_path": "../data/tasks.json",
+  "output_dir": "../results/tiny_cpu",
+  "seed": 17,
+  "model": {
+    "hidden_size": 32,
+    "max_length": 64,
+    "feature_size": 64
+  },
+  "sft": {
+    "epochs": 30,
+    "learning_rate": 0.02,
+    "batch_size": 7
+  },
+  "reward_model": {
+    "epochs": 50,
+    "learning_rate": 0.02
+  },
+  "prm": {
+    "epochs": 40,
+    "learning_rate": 0.02,
+    "monte_carlo_rollouts": 32
+  },
+  "grpo": {
+    "steps": 2,
+    "group_size": 4,
+    "learning_rate": 0.001,
+    "clip": 0.2,
+    "kl_coefficient": 0.02,
+    "max_length": 48,
+    "rm_weight": 0.1,
+    "prm_weight": 0.1
+  }
+}

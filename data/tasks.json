@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "tasks": [
+    {
+      "id": "math_train_01", "split": "train", "kind": "math",
+      "prompt": "Compute (1 + 2) * 3.", "answer": "9", "a": 1, "b": 2, "c": 3,
+      "response": "1 + 2 = 3\n3 * 3 = 9\n#### 9",
+      "wrong_response": "1 + 2 = 4\n4 * 3 = 12\n#### 12"
+    },
+    {
+      "id": "math_train_02", "split": "train", "kind": "math",
+      "prompt": "Compute (2 + 3) * 2.", "answer": "10", "a": 2, "b": 3, "c": 2,
+      "response": "2 + 3 = 5\n5 * 2 = 10\n#### 10",
+      "wrong_response": "2 + 3 = 6\n6 * 2 = 12\n#### 12"
+    },
+    {
+      "id": "math_train_03", "split": "train", "kind": "math",
+      "prompt": "Compute (4 + 1) * 3.", "answer": "15", "a": 4, "b": 1, "c": 3,
+      "response": "4 + 1 = 5\n5 * 3 = 15\n#### 15",
+      "wrong_response": "4 + 1 = 4\n4 * 3 = 12\n#### 12"
+    },
+    {
+      "id": "math_train_04", "split": "train", "kind": "math",
+      "prompt": "Compute (3 + 2) * 4.", "answer": "20", "a": 3, "b": 2, "c": 4,
+      "response": "3 + 2 = 5\n5 * 4 = 20\n#### 20",
+      "wrong_response": "3 + 2 = 6\n6 * 4 = 24\n#### 24"
+    },
+    {
+      "id": "math_train_05", "split": "train", "kind": "math",
+      "prompt": "Compute (5 + 2) * 2.", "answer": "14", "a": 5, "b": 2, "c": 2,
+      "response": "5 + 2 = 7\n7 * 2 = 14\n#### 14",
+      "wrong_response": "5 + 2 = 8\n8 * 2 = 16\n#### 16"
+    },
+    {
+      "id": "math_train_06", "split": "train", "kind": "math",
+      "prompt": "Compute (2 + 4) * 3.", "answer": "18", "a": 2, "b": 4, "c": 3,
+      "response": "2 + 4 = 6\n6 * 3 = 18\n#### 18",
+      "wrong_response": "2 + 4 = 5\n5 * 3 = 15\n#### 15"
+    },
+    {
+      "id": "math_train_07", "split": "train", "kind": "math",
+      "prompt": "Compute (6 + 1) * 2.", "answer": "14", "a": 6, "b": 1, "c": 2,
+      "response": "6 + 1 = 7\n7 * 2 = 14\n#### 14",
+      "wrong_response": "6 + 1 = 6\n6 * 2 = 12\n#### 12"
+    },
+    {
+      "id": "math_train_08", "split": "train", "kind": "math",
+      "prompt": "Compute (3 + 3) * 3.", "answer": "18", "a": 3, "b": 3, "c": 3,
+      "response": "3 + 3 = 6\n6 * 3 = 18\n#### 18",
+      "wrong_response": "3 + 3 = 7\n7 * 3 = 21\n#### 21"
+    },
+    {
+      "id": "tool_train_01", "split": "train", "kind": "tool",
+      "prompt": "Use a calculator for 6 * 7.",
+      "answer": "{\"name\":\"calculator\",\"arguments\":{\"expression\":\"6 * 7\"}}",
+      "response": "{\"name\":\"calculator\",\"arguments\":{\"expression\":\"6 * 7\"}}",
+      "wrong_response": "{\"name\":\"calculator\",\"arguments\":{\"expression\":\"6 + 7\"}}"
+    },
+    {
+      "id": "tool_train_02", "split": "train", "kind": "tool",
+      "prompt": "Look up the weather in paris.",
+      "answer": "{\"name\":\"weather\",\"arguments\":{\"city\":\"paris\"}}",
+      "response": "{\"name\":\"weather\",\"arguments\":{\"city\":\"paris\"}}",
+      "wrong_response": "{\"name\":\"weather\",\"arguments\":{\"city\":\"london\"}}"
+    },
+    {
+      "id": "tool_train_03", "split": "train", "kind": "tool",
+      "prompt": "Look up the weather in berlin.",
+      "answer": "{\"name\":\"weather\",\"arguments\":{\"city\":\"berlin\"}}",
+      "response": "{\"name\":\"weather\",\"arguments\":{\"city\":\"berlin\"}}",
+      "wrong_response": "{\"name\":\"weather\",\"arguments\":{\"city\":\"paris\"}}"
+    },
+    {
+      "id": "tool_train_04", "split": "train", "kind": "tool",
+      "prompt": "Set a timer for 10 minutes.",
+      "answer": "{\"name\":\"timer\",\"arguments\":{\"minutes\":10}}",
+      "response": "{\"name\":\"timer\",\"arguments\":{\"minutes\":10}}",
+      "wrong_response": "{\"name\":\"timer\",\"arguments\":{\"minutes\":20}}"
+    },
+    {
+      "id": "tool_train_05", "split": "train", "kind": "tool",
+      "prompt": "Use a calculator for 8 + 5.",
+      "answer": "{\"name\":\"calculator\",\"arguments\":{\"expression\":\"8 + 5\"}}",
+      "response": "{\"name\":\"calculator\",\"arguments\":{\"expression\":\"8 + 5\"}}",
+      "wrong_response": "{\"name\":\"calculator\",\"arguments\":{\"expression\":\"8 - 5\"}}"
+    },
+    {
+      "id": "tool_train_06", "split": "train", "kind": "tool",
+      "prompt": "Set a timer for 5 minutes.",
+      "answer": "{\"name\":\"timer\",\"arguments\":{\"minutes\":5}}",
+      "response": "{\"name\":\"timer\",\"arguments\":{\"minutes\":5}}",
+      "wrong_response": "{\"name\":\"timer\",\"arguments\":{\"minutes\":15}}"
+    },
+    {
+      "id": "math_eval_01", "split": "eval", "kind": "math",
+      "prompt": "Compute (4 + 4) * 2.", "answer": "16", "a": 4, "b": 4, "c": 2,
+      "response": "4 + 4 = 8\n8 * 2 = 16\n#### 16",
+      "wrong_response": "4 + 4 = 9\n9 * 2 = 18\n#### 18"
+    },
+    {
+      "id": "math_eval_02", "split": "eval", "kind": "math",
+      "prompt": "Compute (5 + 1) * 4.", "answer": "24", "a": 5, "b": 1, "c": 4,
+      "response": "5 + 1 = 6\n6 * 4 = 24\n#### 24",
+      "wrong_response": "5 + 1 = 5\n5 * 4 = 20\n#### 20"
+    },
+    {
+      "id": "math_eval_03", "split": "eval", "kind": "math",
+      "prompt": "Compute (7 + 2) * 2.", "answer": "18", "a": 7, "b": 2, "c": 2,
+      "response": "7 + 2 = 9\n9 * 2 = 18\n#### 18",
+      "wrong_response": "7 + 2 = 8\n8 * 2 = 16\n#### 16"
+    },
+    {
+      "id": "tool_eval_01", "split": "eval", "kind": "tool",
+      "prompt": "Look up the weather in rome.",
+      "answer": "{\"name\":\"weather\",\"arguments\":{\"city\":\"rome\"}}",
+      "response": "{\"name\":\"weather\",\"arguments\":{\"city\":\"rome\"}}",
+      "wrong_response": "{\"name\":\"weather\",\"arguments\":{\"city\":\"paris\"}}"
+    },
+    {
+      "id": "tool_eval_02", "split": "eval", "kind": "tool",
+      "prompt": "Use a calculator for 9 * 3.",
+      "answer": "{\"name\":\"calculator\",\"arguments\":{\"expression\":\"9 * 3\"}}",
+      "response": "{\"name\":\"calculator\",\"arguments\":{\"expression\":\"9 * 3\"}}",
+      "wrong_response": "{\"name\":\"calculator\",\"arguments\":{\"expression\":\"9 + 3\"}}"
+    },
+    {
+      "id": "tool_eval_03", "split": "eval", "kind": "tool",
+      "prompt": "Set a timer for 15 minutes.",
+      "answer": "{\"name\":\"timer\",\"arguments\":{\"minutes\":15}}",
+      "response": "{\"name\":\"timer\",\"arguments\":{\"minutes\":15}}",
+      "wrong_response": "{\"name\":\"timer\",\"arguments\":{\"minutes\":5}}"
+    }
+  ]
+}
