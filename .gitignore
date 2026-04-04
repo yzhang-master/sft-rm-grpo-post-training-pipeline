@@ -8,4 +8,5 @@ build/
 dist/
 results/**
 !results/.gitkeep
+!results/tiny_cpu_benchmark.json
 .mutation-tmp/
